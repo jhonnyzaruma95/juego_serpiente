@@ -8,6 +8,11 @@
     
 
     // Primera pintura del juego al cargar la página
+    dibujarTodo();
+
+     // =========================
+    // FUNCIONES DE DIBUJO
+    // =========================
 
     function dibujarTablero(){
       ctx.strokeStyle = "white";
@@ -34,10 +39,6 @@
       
     }
 
-    // =========================
-    // FUNCIONES DE DIBUJO
-    // =========================
-
     function limpiarCanvas() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
     }
@@ -45,8 +46,31 @@
     function dibujarTodo() {
       limpiarCanvas();
       dibujarTablero();
+      pintarParte(5,5);
+      pintarParte(10,2);
+      pintarParte(23,23);
+      pintarParte(23,10);
+      pintarParte(0,10);
+      pintarParte(23,0);
+    
     }
 
-    dibujarTodo();
+    //parte 2 serpiente 
+
+    function pintarParte(lineaX,lineaY){
+      let x = lineaX * TAMANIO_CELDA;
+      let y = lineaY * TAMANIO_CELDA;
+      ctx.fillStyle = "green";
+      ctx.fillRect(x,y,TAMANIO_CELDA,TAMANIO_CELDA);
+
+      ctx.strokeStyle = "red";
+      ctx.strokeRect(x,y,TAMANIO_CELDA,TAMANIO_CELDA);
+
+    
+
+
+    }
+
+
 
 
