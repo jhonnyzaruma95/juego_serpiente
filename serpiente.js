@@ -19,6 +19,8 @@
     
 
     // Primera pintura del juego al cargar la página
+      pintarComida();
+      dibujarTodo();
 
      // =========================
     // FUNCIONES DE DIBUJO
@@ -195,9 +197,7 @@
          return false;
         }
       }
-      pintarComida();
-      dibujarTodo();
-
+     
 
 
 
